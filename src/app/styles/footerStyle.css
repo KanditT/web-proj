@@ -1,0 +1,17 @@
+/* Footer styling */
+.footer {
+    background-color: #000000; /* Black background */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+}
+
+.footer-text {
+    color: #fff;               /* White text color */
+    font-size: 18px;           /* Font size for the text */
+}

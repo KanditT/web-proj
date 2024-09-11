@@ -1,0 +1,42 @@
+
+
+.navbar {
+    background-color: #000000; /* Black background */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    height: 70px;
+}
+
+.title {
+    font-size: 24px; /* Font size for title */
+    font-weight: bold;
+}
+
+.title .chat {
+    color: #ADFF2F; /* Green color (LimeGreen) */
+}
+
+.title .cane {
+    color: #00FFFF; /* Blue color (Cyan/Aqua) */
+}
+
+.loginButton {
+    background-color: #00bfff; /* Blue background 007BFF */
+    color: rgb(35, 35, 35);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 90px;
+    border: none;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
