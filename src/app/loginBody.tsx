@@ -3,7 +3,7 @@ import './styles/loginBodyStyle.css'; // Ensure this path is correct
 
 const LoginBody: React.FC = () => {
     return (
-        <main>
+        <div className='main'>
             <h1 className="main-title">Chat CANE</h1>
             <div className="main-content">
                 <div className="content-1">
@@ -27,7 +27,7 @@ const LoginBody: React.FC = () => {
                 <input type="text" placeholder="Try Message To ChatCANE" className="chat-input" />
                 <button className="enter-btn">ENTER</button>
             </div>
-        </main>
+        </div>
     );
 };
 

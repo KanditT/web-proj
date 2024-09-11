@@ -40,3 +40,16 @@
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+.profilePicContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
