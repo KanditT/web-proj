@@ -1,23 +1,27 @@
-
-
 .navbar {
-    background-color: #000000; /* Black background */
-    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Black background */
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    /* padding: 10px 40px; */
     position: fixed;
     top: 0;
     z-index: 50;
-    height: 70px;
+    height: 9vh;
 }
 
+/* Adjust title alignment */
 .title {
-    font-size: 24px; /* Font size for title */
+    font-size: 24px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 4vw;
 }
 
+/* Color for the title text */
 .title .chat {
     color: #ADFF2F; /* Green color (LimeGreen) */
 }
@@ -26,30 +30,34 @@
     color: #00FFFF; /* Blue color (Cyan/Aqua) */
 }
 
+/* Login button styling */
 .loginButton {
-    background-color: #00bfff; /* Blue background 007BFF */
+    background-color: #00bfff; /* Blue background */
     color: rgb(35, 35, 35);
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 90px;
     border: none;
     cursor: pointer;
+    margin-right: 2vw;
 }
 
+/* Hover effect for login button */
 .loginButton:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Profile picture container */
 .profilePicContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Profile picture styling */
 .profilePic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
-

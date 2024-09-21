@@ -3,9 +3,9 @@ import '../styles/footerStyle.css'; // Ensure the path is correct
 
 const Footer: React.FC = () => {
     return (
-        <footer className="footer">
-            <p className="footer-text">Footer</p>
-        </footer>
+        <div className="footer">
+            <p className="footer-text">© 2021 ChatCane</p>
+        </div>
     );
 };
 

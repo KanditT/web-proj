@@ -1,25 +1,22 @@
 import Image from "next/image";
-//import type { AppProps } from 'next/app';
-import Navbar from './components/navbar'; // Ensure the path is correct
-import LoginBody from './loginBody';
-import Footer from './components/footer';
-// function MyApp({ Component, pageProps }: AppProps) {
-//     return (
-//         <>
-//             <Navbar />
-//             <Component {...pageProps} />
-//         </>
-//     );
-// }
+//import LoginBody from './loginBody';
+import ChatBody from './chatBody';
+import Layout from './layout';
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import LoginBody from "./loginBody";
+//import dynamic from 'next/dynamic';
 
-// export default MyApp;
+//const LoginBody = dynamic(() => import('./loginBody'), { ssr: false });
+
 export default function Home() {
   return (
-    
-    <div>
-      <Navbar />
-      <LoginBody />
-      <Footer />
-    </div>
+          <div>
+            {/* <Navbar /> */}
+            {/* <LoginBody /> */}
+            <ChatBody />
+            {/* <Footer /> */}
+          </div>
+
   );
 }

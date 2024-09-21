@@ -1,0 +1,100 @@
+/* Basic container to center the chatbox */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+/* Main chat box */
+.chat-box {
+    width: 600px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header section of the chat */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat-header h3 {
+    font-size: 24px;
+    color: #7eff2a;
+    /* Use the green color from the design */
+}
+
+/* Chat topic button-like element */
+.chat-topic {
+    background-color: #2b2b2b;
+    border-radius: 25px;
+    padding: 5px 15px;
+    border: 1px solid #666;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Chat content section */
+.chat-content {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #c0f292;
+    font-size: 16px;
+}
+
+
+.chat-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #a0a0a0;
+    margin-top: 0;
+}
+
+.input-container {
+    position: relative;
+    width: 60%;
+}
+
+.user-input {
+    width: 100%;
+    padding: 10px 90px 10px 20px; 
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #e4e4e4;
+    box-sizing: border-box;
+}
+
+.enter-btn {
+    position: absolute;
+    right: 5px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #707070;
+    border: 2px solid #00bfff;
+    padding: 6px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    height: 30px; 
+    transition: background-color 0.3s ease;
+}
+
+.enter-btn:hover {
+    background-color: #2d3c41;
+}
+
+

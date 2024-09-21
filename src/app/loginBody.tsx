@@ -8,7 +8,7 @@ const LoginBody: React.FC = () => {
             <div className="main-content">
                 <div className="content-1">
                     <p className="description">
-                        Web-app that welcomes everybody who wants to learn & explore about sugarcane
+                        Web-app that welcomes <br />everybody who wants to learn & explore about sugarcane
                     </p>
                     <button className="sign-in-btn">Sign In</button>
                 </div>
@@ -24,9 +24,12 @@ const LoginBody: React.FC = () => {
                 </div>
             </div>
             <div className="chat-section">
-                <input type="text" placeholder="Try Message To ChatCANE" className="chat-input" />
-                <button className="enter-btn">ENTER</button>
+                <div className="input-container">
+                    <input type="text" placeholder="Try Message To ChatCANE" className="user-input" />
+                    <button className="enter-btn">ENTER</button>
+                </div>
             </div>
+
         </div>
     );
 };

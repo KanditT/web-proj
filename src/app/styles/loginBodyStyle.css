@@ -3,31 +3,51 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
     color: #fff;
-
+    /* height: 100%; */
 }
 
-.main{
-    margin: 70px 0 47px 0;
-    text-align: center;
-    height: 80%;
+/* html, body {
+    height: 100%;
+    width: 100%;
+} */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 9vh; /* Push main content below the navbar */
+    height: 84vh; 
+    /* min-height: calc(100vh - 13vh); */
+    /* padding: 10px; */
+    
 }
+
 .main-title {
+    text-align: center;
     font-size: 48px;
-    background: -webkit-linear-gradient(left,#ffff66,#ccff33,#7aff33, #64ffdb,#64f0ff);
+    background: -webkit-linear-gradient(left, #f7f70e,#ffff66,  #a3ff33, #64ffaa, #64ffdb, #64f0ff);
     color: transparent;
     background-clip: text;
     display: inline-block;
-    padding: 5% 5% 2% 5%;
+    padding: 6% 0 0 0;
 }
 
 .main-content {
+    
     display: flex;
     flex-direction: row;
-    margin: 5% 5% 10% 5%;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-grow: 1; /* Allow main content to grow and fill available space */
+    align-items: center;
+    max-width: 80%; /* Limit max width for larger screens */
+    max-height: 40%; /* Limit max height for larger screens */
 }
 
 .content-1, .content-2, .content-3 {
     flex: 1;
+    text-align: center;
+    padding: 10px;
 }
 
 .description {
@@ -38,6 +58,7 @@ body {
 
 .sign-in-btn {
     background-color: #ffff66;
+    color: #2a2a2a;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -46,8 +67,18 @@ body {
     margin-bottom: 20px;
 }
 
+.sign-in-btn:hover {
+    background-color: #fadd37;
+    color: #2a2a2a;
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
 .logo-image {
     margin: 20px 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .menu {
@@ -68,24 +99,79 @@ body {
     cursor: pointer;
     width: 200px;
 }
+.menu-btn:hover {
+    background-color: #00bfff;
+    color: #fff;
+}
 
 .chat-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #2a2a2a;
-    margin-top: 50px;
-    
+    background-color: #1e1e1e;
+    margin-top: 0;
 }
 
+.input-container {
+    position: relative;
+    width: 60%; /* Adjust width as needed */
+}
+
+.chat-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    margin-top: 0;
+}
+
+.input-container {
+    position: relative;
+    width: 60%; /* Adjust the width of the input container */
+}
+
+.user-input {
+    width: 100%;
+    padding: 10px 90px 10px 20px; /* Increase right padding to leave space for the button */
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2a2a2a;
+    box-sizing: border-box; /* Ensures padding is inside the width */
+}
+
+.enter-btn {
+    position: absolute;
+    right: 5px; /* Align to the right inside the input container */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #707070;
+    border: 2px solid #00bfff;
+    padding: 6px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    height: 30px; /* Adjust the height to fit better with the input field */
+}
+
+.enter-btn:hover {
+    background-color: #2d3c41;
+}
+
+/* 
 .chat-section input {
+
     width: 60%;
     padding: 10px;
     border: none;
     border-radius: 25px;
     margin-right: 10px;
     font-size: 16px;
+    color: #fff;
+    background-color: #2a2a2a;
 }
 
 .enter-btn {
@@ -95,4 +181,78 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
+} */
+
+/* @media screen and (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+
+    .menu-btn {
+        width: 80%;
+    }
+
+    .chat-section input {
+        width: 70%;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .sign-in-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .menu-btn {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .chat-section input {
+        width: 80%;
+    }
+
+    .enter-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+
+    .sign-in-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .menu-btn {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .chat-section input {
+        width: 85%;
+    }
+
+    .enter-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
 }

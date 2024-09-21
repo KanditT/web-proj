@@ -10,6 +10,8 @@ const Navbar: React.FC = () => {
             <button className="loginButton">
                 Log In
             </button>
+            <script src="navbarjs.js"></script>
+            
         </nav>
     );
 };

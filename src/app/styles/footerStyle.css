@@ -1,16 +1,18 @@
-/* Footer styling */
 .footer {
-    background-color: #000000; /* Black background */
-    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 40px;
-    position: fixed;
+    position: sticky;
+    /* Footer sticks at the bottom of the page when scrolling */
     bottom: 0;
     z-index: 50;
-    height: 47px;
+    height: 4vh;
 }
+
 
 .footer-text {
     color: #fff;               /* White text color */
