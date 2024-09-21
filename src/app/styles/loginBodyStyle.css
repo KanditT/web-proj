@@ -145,7 +145,7 @@ body {
 
 .enter-btn {
     position: absolute;
-    right: 5px; /* Align to the right inside the input container */
+    right: 5px; 
     top: 50%;
     transform: translateY(-50%);
     background-color: #707070;

@@ -27,3 +27,10 @@ async function sendMessage(event = null) {
             }
         }
     }
+    function appendMessage(message) {
+        const messages = document.getElementById('messages');
+        const messageElem = document.createElement('div');
+        messageElem.textContent = message;
+        messages.appendChild(messageElem);
+        messages.scrollTop = messages.scrollHeight; // เลื่อนลงไปที่ข้อความล่าสุด
+    }
