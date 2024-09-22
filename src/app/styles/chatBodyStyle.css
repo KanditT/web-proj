@@ -16,8 +16,7 @@ body {
 }
 
 #chatbox {
-    
-    width: 600px; /* Adjust width to be wider */
+    width: 50vw; /* Adjust width to be wider */
     padding: 20px;
     background-color: #333333; /* Darker gray for background */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase shadow for depth */
@@ -27,7 +26,7 @@ body {
 }
 
 #messages {
-    height: 350px; /* Adjust height to be taller */
+    height: 50vh; /* Adjust height to be taller */
     overflow-y: scroll;
     background-color: #3e3e3e;
     border-radius: 10px;
@@ -86,8 +85,13 @@ body {
 
 #chat-cane-title {
     font-size: 24px; /* Adjust title font size */
-    color: #b9c947; /* Lime green color */
+    /* color: #b9c947; Lime green color */
     margin-bottom: 10px;
+    background: -webkit-linear-gradient(left, #f7f70e,#ffff66,  #a3ff33, #64ffaa, #64ffdb, #64f0ff);
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-weight: bold;
 }
 
 #chat-cane-text {

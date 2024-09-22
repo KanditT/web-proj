@@ -1,3 +1,3 @@
-document.querySelector('.loginButton').addEventListener('click', () => {
-    window.location.href = '/pageChat';
-});
+// document.querySelector('.loginButton').addEventListener('click', () => {
+//     window.location.href = '/chat';
+// });
