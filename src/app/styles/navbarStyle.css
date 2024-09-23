@@ -40,11 +40,21 @@
     border: none;
     cursor: pointer;
     margin-right: 2vw;
+    transform-origin: center;
+    transition: all 0.1s ease-out;
 }
 
 /* Hover effect for login button */
-.loginButton:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.loginButton:active {
+    font-size: 0;
+    background: rgb(250,244,0);
+    background: linear-gradient(90deg, rgba(250,244,0,1) 0%, rgba(31,247,24,1) 51%, rgba(4,190,222,1) 85%, rgba(0,180,255,1) 100%);
+    width: 20px;
+    height: 40px;
+    border-radius: 0;
+    rotate: 225deg;
+    margin-right: 4vw;
+    
 }
 
 /* Profile picture container */

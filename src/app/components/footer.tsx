@@ -4,7 +4,7 @@ import '../styles/footerStyle.css'; // Ensure the path is correct
 const Footer: React.FC = () => {
     return (
         <div className="footer">
-            <p className="footer-text">© 2021 ChatCane</p>
+            <p className="footer-text">© 2024 ChatCane</p>
         </div>
     );
 };

@@ -92,6 +92,15 @@ body {
     background-clip: text;
     display: inline-block;
     font-weight: bold;
+    transition: all 1s ease-out;
+}
+#chat-cane-title:hover{
+    letter-spacing: 2vw;
+    background: -webkit-linear-gradient(right, #f7f70e,#ffff66,  #a3ff33, #64ffaa, #64ffdb, #64f0ff);
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-weight: bold;
 }
 
 #chat-cane-text {
