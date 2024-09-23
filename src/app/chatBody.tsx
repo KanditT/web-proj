@@ -7,11 +7,24 @@ export default function ChatComponent() {
     const messagesRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const appendMessage = (message: string) => {
+    const appendMessage = (message: string, isUser: boolean = false) => {
         if (messagesRef.current) {
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add('message');
+    
+            if (!isUser) {
+                const avatar = document.createElement('div');
+                avatar.classList.add('user-avatar');
+                messageContainer.appendChild(avatar); // Add avatar only for bot messages
+            }
+    
             const messageElem = document.createElement('div');
-            messageElem.textContent = message;
-            messagesRef.current.appendChild(messageElem);
+            // Use innerHTML to allow HTML content such as <br> for line breaks
+            messageElem.innerHTML = message;
+            messageElem.classList.add(isUser ? 'user-message' : 'bot-message');
+    
+            messageContainer.appendChild(messageElem);
+            messagesRef.current.appendChild(messageContainer);
             messagesRef.current.scrollTop = messagesRef.current.scrollHeight; // Scroll to the latest message
         }
     };
@@ -21,16 +34,16 @@ export default function ChatComponent() {
         if (event && 'key' in event && event.key !== 'Enter') {
             return;
         }
-
+    
         const userInput = inputRef.current?.value;
         if (userInput && userInput.trim()) {
-            appendMessage(`คุณ: ${userInput}`);
-
+            appendMessage(`<b style=color:#00bfff>คุณ:</b><br>${userInput}`, true); // Append user message with line break
+    
             // Clear the input field
             if (inputRef.current) {
                 inputRef.current.value = '';
             }
-
+    
             try {
                 const response = await fetch('/chatbot', {
                     method: 'POST',
@@ -39,16 +52,16 @@ export default function ChatComponent() {
                     },
                     body: JSON.stringify({ user_input: userInput }),
                 });
-
+    
                 const data = await response.json();
-                appendMessage(`Chatbot: ${data.response}`);
+                appendMessage(`Chatbot:<br>${data.response}`); // Append bot message
             } catch (error) {
                 console.error('Error fetching response:', error);
-                appendMessage('Error: Could not contact the chatbot.');
+                appendMessage('<b style=color:#4c0000>Error:</b><br>Could not contact the chatbot.');
             }
         }
     };
-
+    
     const handleKeyPress = (event: React.KeyboardEvent) => {
         if (event.key === 'Enter') {
             sendMessage(event);
@@ -62,7 +75,7 @@ export default function ChatComponent() {
             <div id="chatbox">
                 <div id="chat-cane-title">ChatCANE</div>
 
-                <div id="messages" ref={messagesRef}></div>
+                <div id="messages" className='messages' ref={messagesRef}></div>
 
                 <div id="input-box">
                     <input

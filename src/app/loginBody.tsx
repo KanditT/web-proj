@@ -12,15 +12,22 @@ const LoginBody: React.FC = () => {
         setInputMessage(event.target.value);
     };
 
-    // Handle the ENTER button click
-    const handleEnterClick = () => {
+    // Handle the ENTER button click or Enter key press
+    const handleSubmit = () => {
         if (!isLoggedIn) {
             // If not logged in, replace the placeholder and clear the input
             setInputMessage(""); 
-            setPlaceholder("Please login first!");
+            setPlaceholder("Please login first !!!");
         } else {
             console.log("Message:", inputMessage); // Process the message if logged in
             // Add any further logic you want here
+        }
+    };
+
+    // Handle the key press (specifically Enter key)
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            handleSubmit(); // Trigger the submit function on Enter key press
         }
     };
 
@@ -53,8 +60,9 @@ const LoginBody: React.FC = () => {
                         placeholder={placeholder} 
                         className="user-input" 
                         onChange={handleInputChange} 
+                        onKeyDown={handleKeyPress} // Listening for the Enter key
                     />
-                    <button className="enter-btn" onClick={handleEnterClick}>ENTER</button>
+                    <button className="enter-btn" onClick={handleSubmit}>ENTER</button>
                 </div>
             </div>
         </div>

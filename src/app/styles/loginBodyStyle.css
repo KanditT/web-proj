@@ -17,9 +17,6 @@ body {
     justify-content: space-between;
     margin-top: 9vh; /* Push main content below the navbar */
     height: 84vh; 
-    /* min-height: calc(100vh - 13vh); */
-    /* padding: 10px; */
-    
 }
 
 .main-title {

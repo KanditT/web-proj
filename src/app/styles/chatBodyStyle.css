@@ -35,6 +35,63 @@ body {
     color: #cfcfcf;
 }
 
+.message {
+    margin-bottom: 1vh;
+    display: flex;
+    /* align-items: center; Ensure the icon and text are vertically aligned */
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    max-width: 100%; /* Ensure the message bubble doesn't take up the whole width */
+    font-family: 'Comic Sans MS', sans-serif; /* Optional: a playful font */
+    background-color: #686868; /* Message background color */
+    color: #fff;
+    word-wrap: break-word; /* Ensures long words break and wrap */
+    overflow-wrap: break-word; /* Handles text overflow for long words */
+    white-space: pre-wrap; /* Keeps normal white spaces but allows text to wrap */
+    box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+.user-message {
+    /* align-self: flex-end; Aligns the message bubble to the right */
+    /* background-color: #4caf50; User's message background color */
+    text-align: left; /* Aligns text inside the bubble to the right */
+    max-width: 100%; /* Limit the width to 80% of the chat window */
+    word-wrap: break-word; /* Wrap long text to the next line */
+    overflow-wrap: break-word; /* Handles long words */
+    white-space: pre-wrap; /* Preserves white spaces but allows wrapping */
+    box-sizing: border-box;   
+    border-radius: 15px; /* Makes rounded corners */
+    padding: 0 0 0 10px ; /* Adds padding inside the bubble */
+    margin: 5px 0; /* Adds space between messages */
+}
+
+
+.bot-message {
+    align-self: flex-start;
+    /* background-color: #e70000; Bot's message background color */
+    color: #fff;
+    text-align: left;
+    word-wrap: break-word; /* Ensure bot message text wraps */
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* Preserves white spaces but allows wrapping */
+    box-sizing: border-box;
+}
+
+/* The icon or avatar for bot messages */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background-image: url('/favicon.ico'); /* Set favicon as background image */
+    background-size: cover; /* Ensure the icon covers the entire area */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #input-box{
         display: flex;
         justify-content: center;
