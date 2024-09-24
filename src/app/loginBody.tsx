@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import './styles/loginBodyStyle.css'; // Ensure this path is correct
+import Image from 'next/image';
 
 const LoginBody: React.FC = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false); // Tracks user login status
@@ -42,7 +43,13 @@ const LoginBody: React.FC = () => {
                     <button className="sign-in-btn" onClick={() => setIsLoggedIn(true)}>Sign In</button>
                 </div>
                 <div className="content-2">
-                    <img src="/chatcane-logo.png" alt="ChatCane Logo" className="logo-image" />
+                <iframe 
+                    src="/images/cclogo.png" 
+                    className="w-full h-full" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    ></iframe>
+
                 </div>
                 <div className="content-3">
                     <nav className="menu">

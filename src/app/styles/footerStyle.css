@@ -5,12 +5,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 40px;
+    /* padding: 10px 40px 0 40px; */
     position: sticky;
     /* Footer sticks at the bottom of the page when scrolling */
-    bottom: 0;
+    top: 100vh;
+    /* bottom: 1px;
+    position: absolute; */
     z-index: 50;
-    height: 4vh;
+    height: auto;
 }
 
 
